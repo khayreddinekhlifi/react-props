@@ -1,21 +1,19 @@
 import React, { Component } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
 function ChildrenImage(props) {
-  return (
-    <div className="APP-Image">
-      <img
-        src="https://www.dynamique-mag.com/wp-content/uploads/8efddbf080b9aa2f0b141b19e1656fd9.jpg"
-        alt={props.bio}
-        style={{ margin: 30 }}
-      />
-    </div>
-  );
+  return <div className="APP-Image">{props.children}</div>;
 }
 export default function ProfileComponent(FullName, bio, profession) {
   const alertMyInput = (FullName) => alert(FullName);
   return (
     <div>
-      <ChildrenImage />
+      <ChildrenImage>
+        <img
+          src="https://www.dynamique-mag.com/wp-content/uploads/8efddbf080b9aa2f0b141b19e1656fd9.jpg"
+          style={{ margin: 30 }}
+          alt="fneifien"
+        />
+      </ChildrenImage>
       <HandelName alertMyInput={alertMyInput} />
     </div>
   );
